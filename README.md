@@ -2,7 +2,7 @@
 
 InfraRAT is a research data platform for exploring roughly 20,000 rat-behaviour sessions from McMaster University's Szechtman Lab. It brings experimental metadata and the original FRDR files into one searchable interface, so researchers can move from a cohort-level question to an individual session without stitching the archive together by hand.
 
-This was built by a five-person McMaster capstone team in collaboration with Dr. Henry Szechtman and Dr. Anna Dvorkin-Gheva. For a shorter account of the project and my role, see the [project case study](https://agoodyer.com/projects/infrarat/).
+InfraRAT was developed collectively by a five-person McMaster Software Engineering capstone team—Aidan Goodyer, Jeremy Orr, Leo Vugert, Nathan Perry, and Timothy Pokanai—in collaboration with project partners Dr. Henry Szechtman and Dr. Anna Dvorkin-Gheva. This repository documents the team's shared project and its outcomes.
 
 ![InfraRAT home page](docs/Extras/UserGuide/homepage.png)
 
@@ -29,15 +29,6 @@ InfraRAT adds a normalized PostgreSQL metadata layer and a browser-based researc
 The React and TypeScript frontend is served by Nginx. It calls a FastAPI backend that owns querying, filtering, visualizations, inventory summaries, and file retrieval. PostgreSQL stores the normalized experimental metadata and is initialized from the data bundled with the backend database image. Docker Compose runs the three services together.
 
 The natural-language tools are provider-agnostic: the backend uses an OpenAI-compatible API URL, key, and model name supplied through environment variables. The generated SQL and its rationale are surfaced as part of the selection response, rather than hiding the database operation behind a chat answer.
-
-## What I worked on
-
-InfraRAT was a team project, so the repository reflects shared work. My contributions included:
-
-- establishing early frontend structure, routing, home and experiment pages, and the first query-interface mockups;
-- helping connect the frontend, backend, database, and language-model workflow;
-- Dockerizing the system and setting up staging deployment and CodeQL automation;
-- adding backend tests and contributing to requirements, design, and verification documentation.
 
 ## Run it locally
 
@@ -113,7 +104,7 @@ The main supporting documents are the [user guide](docs/Extras/UserGuide/UserGui
 
 ## Team
 
-Aidan Goodyer, Jeremy Orr, Leo Vugert, Nathan Perry, and Timothy Pokanai, with project partners Dr. Henry Szechtman and Dr. Anna Dvorkin-Gheva.
+InfraRAT is the shared work of McMaster Software Engineering capstone team members Aidan Goodyer, Jeremy Orr, Leo Vugert, Nathan Perry, and Timothy Pokanai, completed in collaboration with project partners Dr. Henry Szechtman and Dr. Anna Dvorkin-Gheva.
 
 ## Status
 
